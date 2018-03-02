@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="paneLogin" prefHeight="265.0" prefWidth="585.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accounts.Login">
+   <children>
+      <Pane layoutX="148.0" layoutY="14.0" prefHeight="83.0" prefWidth="80.0" style="-fx-background-color: #8B0000;">
+         <children>
+            <Label layoutX="6.0" layoutY="35.0" text="System" textFill="PEACHPUFF">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="134.0" style="-fx-background-color: #FFDAB9;">
+         <children>
+            <Label layoutX="7.0" layoutY="15.0" text="Point Of Sale">
+               <font>
+                  <Font name="Playbill" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="84.0" prefHeight="16.0" prefWidth="214.0" style="-fx-background-color: #8B0000;" />
+      <Label layoutX="104.0" layoutY="132.0" text="Username">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="183.0" text="Password">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <MenuButton layoutX="417.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Create new Account">
+        <items>
+          <MenuItem fx:id="optNonAdmin" mnemonicParsing="false" onAction="#optNonAdminClick" text="Non Admin account" />
+          <MenuItem mnemonicParsing="false" text="Admin Account" />
+        </items>
+      </MenuButton>
+      <TextField layoutX="302.0" layoutY="131.0" prefHeight="25.0" prefWidth="250.0" />
+      <PasswordField layoutX="302.0" layoutY="182.0" prefHeight="25.0" prefWidth="250.0" />
+      <Button fx:id="btnLogin" layoutX="473.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnLoginClick" prefHeight="25.0" prefWidth="80.0" text="Sign In" />
+   </children>
+</AnchorPane>

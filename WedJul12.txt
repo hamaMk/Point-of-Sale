@@ -1,0 +1,11 @@
+earphones(tdk)    x1    $3.0
+battery(iphone)    x1    $5.0
+keyboard    x2    $7.0
+
+22.0
+earphones(tdk)    x1    $3.0
+battery(iphone)    x1    $5.0
+keyboard    x2    $7.0
+battery(iphone)    x1    $5.0
+
+49.0

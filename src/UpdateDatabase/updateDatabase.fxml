@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateDatabase.Controller">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="274.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="24.0" prefHeight="23.0" prefWidth="84.0" text="Item" />
+            <Label layoutX="14.0" layoutY="55.0" prefHeight="23.0" prefWidth="84.0" text="Quantity" />
+            <Label layoutX="14.0" layoutY="85.0" prefHeight="23.0" prefWidth="84.0" text="Stock Price" />
+            <Label layoutX="14.0" layoutY="114.0" prefHeight="23.0" prefWidth="84.0" text="Retail Price" />
+            <Label layoutX="14.0" layoutY="148.0" prefHeight="23.0" prefWidth="111.0" text="Wholesale Price" />
+            <Button fx:id="btnAdd" layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#Add" prefHeight="26.0" prefWidth="249.0" text="Add Item" />
+            <Button fx:id="btnClear" layoutX="14.0" layoutY="243.0" mnemonicParsing="false" onAction="#clearClick" prefHeight="26.0" prefWidth="249.0" text="Clear" />
+            <Button layoutX="14.0" layoutY="283.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="249.0" text="Remove Selected" />
+            <Button fx:id="btnRefresh" layoutX="14.0" layoutY="319.0" mnemonicParsing="false" onAction="#refresh" prefHeight="26.0" prefWidth="249.0" text="Refresh" />
+            <TextField fx:id="txtWholesalePrc" layoutX="137.0" layoutY="147.0" prefHeight="26.0" prefWidth="122.0" />
+            <TextField fx:id="txtRetailPrc" layoutX="137.0" layoutY="113.0" prefHeight="26.0" prefWidth="122.0" />
+            <TextField fx:id="txtStockPrc" layoutX="137.0" layoutY="84.0" prefHeight="26.0" prefWidth="122.0" />
+            <TextField fx:id="txtQty" layoutX="137.0" layoutY="54.0" prefHeight="26.0" prefWidth="122.0" />
+            <TextField fx:id="txtItem" layoutX="137.0" layoutY="23.0" onAction="#submitSearch" prefHeight="26.0" prefWidth="122.0" />
+            <Button fx:id="btnSave" layoutX="13.0" layoutY="360.0" mnemonicParsing="false" onAction="#updateDB" prefHeight="26.0" prefWidth="249.0" text="Save changes" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </left>
+   <center>
+      <TableView fx:id="table" prefHeight="400.0" prefWidth="677.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="itemCol" prefWidth="315.0" text="Item Description" />
+            <TableColumn fx:id="qtyCol" prefWidth="53.0" text="Qty" />
+            <TableColumn fx:id="stckpriceCol" prefWidth="92.0" text="Stock Price" />
+            <TableColumn fx:id="retailpriceCol" prefWidth="96.0" text="Retail Price" />
+            <TableColumn fx:id="wholesaleCol" prefWidth="123.0" text="Whoesale Price" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow radius="27.05" width="89.2" />
+         </effect>
+      </TableView>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXApp.jnlp">
+    <information>
+        <title>LoginWindow</title>
+        <vendor>Unknown</vendor>
+        <description>LoginWindow</description>
+        <offline-allowed/>
+    </information>
+    <update check="background"/>
+    <resources>
+        <j2se version="9+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="JavaFXApp.jar" size="62388" download="eager"/>
+        <jar href="controlsfx-9.0.0.jar" size="946412" download="eager"/>
+        <jar href="jfoenix-1.4.0.jar" size="2363143" download="eager"/>
+        <jar href="sqlite-jdbc-3.21.0.jar" size="6672489" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="600" height="400" main-class="Application.LoginWindow" name="LoginWindow"/>
+</jnlp>
+

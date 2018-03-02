@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="140.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="popUps.Notify">
+   <children>
+      <Label fx:id="lblHeading" layoutX="93.0" layoutY="26.0" text="Transaction succeful" textFill="#6f2424">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnOK" layoutX="308.0" layoutY="94.0" mnemonicParsing="false" onAction="#OK" prefHeight="25.0" prefWidth="61.0" text="OK" />
+      <Label fx:id="lblBody" layoutX="93.0" layoutY="62.0" text="Change :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
